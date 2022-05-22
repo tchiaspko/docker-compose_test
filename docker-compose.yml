@@ -1,0 +1,19 @@
+version: 2
+services:
+  web:
+    image: nginx
+    ports:
+    - "10080":80"   
+    environment:
+    - NGINX_HOST=foobar.com
+    - NGINX_PORT=80
+    
+  databases:
+    image: mysql
+    ports:
+    - "13306":3306"
+    environment:
+    - MYSQL_ROOT_PASSWORD=password
+    - MYSQL_USER=user
+    - MYSQL_PASSWORD=password
+    - MYSQL_DATABASEdemodb
